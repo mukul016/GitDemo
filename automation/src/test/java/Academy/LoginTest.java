@@ -2,9 +2,8 @@ package Academy;
 
 import java.io.IOException;
 
+import org.junit.Before;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
 
 import PageObjects.LogIn;
 import resources.InitDriver;
@@ -12,7 +11,7 @@ import resources.InitDriver;
 public class LoginTest extends InitDriver {
 
 	WebDriver driver;
-	@BeforeTest	
+	@Before	
 	public void Presetup() throws IOException
 	{
 		driver= initDriver();
@@ -20,7 +19,7 @@ public class LoginTest extends InitDriver {
 		driver.get(url);
 	}
 	
-	@Test
+	@org.junit.Test
 	public void loginTest()
 	{
 		LogIn lg= new LogIn(driver);
